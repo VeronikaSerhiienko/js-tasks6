@@ -1,9 +1,9 @@
 function getAttributes () {
-  var valueOfHref = document.getElementsByTagName('a')[0].href;
-  var valueOfHreflang = document.getElementsByTagName('a')[0].hreflang;
-  var valueOfRel = document.getElementsByTagName('a')[0].rel;
-  var valueOfTarget = document.getElementsByTagName('a')[0].target;
-  var valueOfType = document.getElementsByTagName('a')[0].type;
+  var valueOfHref = document.querySelector('a').href;
+  var valueOfHreflang = document.querySelector('a').hreflang;
+  var valueOfRel = document.querySelector('a').rel;
+  var valueOfTarget = document.querySelector('a').target;
+  var valueOfType = document.querySelector('a').type;
 
   console.log(valueOfHref);
   console.log(valueOfHreflang);

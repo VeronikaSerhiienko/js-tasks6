@@ -1,4 +1,4 @@
-paintLetter('textToPaint');
+paintLetter('text-to-paint');
 
 function paintLetter(textFieldId) {
   var textInner = document.getElementById(textFieldId).innerHTML;
@@ -12,7 +12,7 @@ function paintLetter(textFieldId) {
     var textnode = document.createTextNode(textInner[i]);
     node.appendChild(textnode);
     colorfulText.appendChild(node);
-    if (node.innerHTML.match(/\w/)) {
+    if (node.innerHTML.match(/[A-Za-z]/)) {
       node.style.color = colorSet[colorSetIndex];
       ++colorSetIndex;
       if (colorSetIndex === colorSet.length) {
