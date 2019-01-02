@@ -15,6 +15,15 @@ function showCards(obj) {
     cardsTitle.className = 'cards__title';
     cardsItem.appendChild(cardsTitle);
 
+    var cardsSex = document.createElement('p');
+    if (obj[i].sex === 'm') {
+      cardsSex.innerText = 'Male';
+    } else {
+      cardsSex.innerText = 'Female';
+    }
+    cardsSex.className = 'cards__subtitle';
+    cardsItem.appendChild(cardsSex);
+
     var cardsYears = document.createElement('p');
     cardsYears.innerText = '( \u2603 ' + obj[i].born + ' - ' + obj[i].died + ' )';
     cardsYears.className = 'cards__years';
@@ -31,12 +40,6 @@ function showCards(obj) {
       fatherName.innerHTML = '<span class = "cards__subtitle"> \u2642 Father: </span>' + obj[i].father;
       fatherName.className = 'cards__description';
       cardsItem.appendChild(fatherName);
-    }
-    if (!obj[i].mother && !obj[i].father) {
-      var orphan = document.createElement('p');
-      orphan.innerText = 'Orphan';
-      orphan.className = 'cards__description';
-      cardsItem.appendChild(orphan);
     }
   }
 
@@ -85,7 +88,7 @@ function female(person) {
 
 function average(array) {
   function plus(a, b) { return a + b; }
-  return Math.round(array.reduce(plus) / array.length);
+  return Math.floor(array.reduce(plus) / array.length);
 }
 
 function calculateAverageDifferenceBetweenMothersAndChildren(obj) {
