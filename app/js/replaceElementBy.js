@@ -1,4 +1,4 @@
-replaceElementBy('block-id', 'table-with-diagonal');
+replaceElementBy('table-with-diagonal', 'block-id');
 
 function replaceElementBy(blockCurrent, blockToReplace) {
   var first = document.getElementById(blockCurrent);
