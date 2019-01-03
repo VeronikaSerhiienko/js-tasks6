@@ -1,9 +1,10 @@
-function getAttributes () {
-  var valueOfHref = document.querySelector('a').href;
-  var valueOfHreflang = document.querySelector('a').hreflang;
-  var valueOfRel = document.querySelector('a').rel;
-  var valueOfTarget = document.querySelector('a').target;
-  var valueOfType = document.querySelector('a').type;
+function getAttributes() {
+  var link = document.querySelector('a');
+  var valueOfHref = link.href;
+  var valueOfHreflang = link.hreflang;
+  var valueOfRel = link.rel;
+  var valueOfTarget = link.target;
+  var valueOfType = link.type;
 
   console.log(valueOfHref);
   console.log(valueOfHreflang);

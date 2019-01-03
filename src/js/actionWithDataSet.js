@@ -94,9 +94,7 @@ function average(array) {
 function calculateAverageDifferenceBetweenMothersAndChildren(obj) {
   var ageCounter = [];
   for (var i = 0; i < obj.length; i++) {
-    if (!obj[i].mother) {
-      continue;
-    } else {
+    if (obj[i].mother) {
       for (var j = 0; j < obj.length; j++) {
         if (obj[i].mother === obj[j].name) {
           ageCounter.push(obj[i].born - obj[j].born);
